@@ -4,15 +4,16 @@
 
  public class LetterCombination {
      static Map<Character,String> phone = new HashMap<>(){{
-         put('2', "abc");
-         put('3', "def");
-         put('4', "ghi");
-         put('5', "jkl");
-         put('6', "mno");
-         put('7', "pqrs");
-         put('8', "tuv");
-         put('9', "wxyz");
-     }};
+         put('1', "abc");
+         put('2', "def");
+         put('3', "ghi");
+         put('4', "jkl");
+         put('5', "mno");
+         put('6', "pqrs");
+         put('7', "tu");
+         put('8', "vwx");
+         put('9', "yz");
+        }};
      static char digitalArray[];
      static List<String> letterList = new LinkedList<>();
      public static void main(String[] args){
@@ -46,10 +47,6 @@
              }
              letterList.add(str.toString());
              return;
-         }
-
-         if(digitalArray[i]=='1'){
-            return;
          }
          String currentStr=phone.get(digitalArray[i]);
          for(char c: currentStr.toCharArray()){
