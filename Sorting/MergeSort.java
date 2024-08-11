@@ -33,8 +33,8 @@ public class MergeSort {
         }
 
         int mid = si + (ei - si) / 2;
-        divide(arr, si, mid);
-        divide(arr, mid + 1, ei);
+        divide(arr, si, mid); //it divided the half left side of array
+        divide(arr, mid + 1, ei);//it divided the other half side of array
         conquer(arr, si, mid, ei);
     }
 
