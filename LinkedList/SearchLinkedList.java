@@ -5,7 +5,6 @@ package LinkedList;
 import java.util.*;
 
 public class SearchLinkedList {
-
     LinkedList<Integer> ll = new LinkedList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -38,7 +37,8 @@ public class SearchLinkedList {
         System.out.println("3) Deleting data in linkedList which is greater than 25: Press d ");
         System.out.println("4) Adding data in linkedList: Press a ");
         System.out.println("5) Show data in linkedList: Press p ");
-        System.out.println("6) For exit: Press e ");
+        System.out.println("6) Show reverse data in linkedList: Press r ");
+        System.out.println("7) For exit: Press e ");
         String isAddingData = sc.next();
 
         switch (isAddingData.toLowerCase()) {
@@ -57,6 +57,10 @@ public class SearchLinkedList {
                 break;
             case "p":
                 showData();
+                asking();
+                break;
+            case "r":
+                reverseLinkedList();
                 asking();
                 break;
             case "e":
@@ -78,7 +82,7 @@ public class SearchLinkedList {
 
         for (int i = 0; i < ll.size(); i++) {
             if (ll.get(i) == sd) {
-                System.out.println("The number " + sd + " you are searching is at " + i+" index of list");
+                System.out.println("The number " + sd + " you are searching is at " + i + " index of list");
                 isDataFound = true;
                 break;
             }
@@ -110,4 +114,21 @@ public class SearchLinkedList {
         System.out.print("null");
         System.out.println();
     }
+
+    void reverseLinkedList() {
+        if (ll.size() > 0) {
+            Collections.reverse(ll);  // Reverses the list
+            System.out.print("Reversed Data: ");
+            for (int data : ll) {
+                System.out.print(data + "->");
+            }
+            System.out.print("null");
+            System.out.println();
+        } else {
+            System.out.println("The list is empty.");
+        }
+ 
+    }
+
 }
+// 20->21->11->18->null
