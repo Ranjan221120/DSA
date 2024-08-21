@@ -5,19 +5,6 @@ package LinkedList;
 import java.util.*;
 
 public class SearchLinkedList {
-
-
-    Node head;
-    class Node{
-        Node next;
-
-        Node(){
-            this.next = null;
-        }
-    }
-
-
-
     LinkedList<Integer> ll = new LinkedList<>();
     Scanner sc = new Scanner(System.in);
 
